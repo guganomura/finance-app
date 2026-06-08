@@ -1,0 +1,151 @@
+.novo-gasto {
+  min-height: 100vh;
+  background: #1a1f2e;
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+.novo-gasto__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.novo-gasto__back {
+  background: none;
+  border: none;
+  color: #00ff88;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.novo-gasto__header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.novo-gasto__form {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.novo-gasto__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.novo-gasto__field label {
+  font-size: 13px;
+  color: #aaa;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.novo-gasto__input {
+  background: #252b3b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.novo-gasto__input:focus {
+  border-color: #00ff88;
+}
+
+.novo-gasto__input--erro {
+  border-color: #ff6b6b !important;
+}
+
+.novo-gasto__erro {
+  color: #ff6b6b;
+  font-size: 12px;
+}
+
+.novo-gasto__input option {
+  background: #252b3b;
+}
+
+.novo-gasto__toggle-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #252b3b;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.novo-gasto__toggle-field label {
+  font-size: 15px;
+  color: #fff;
+}
+
+.novo-gasto__toggle {
+  width: 48px;
+  height: 26px;
+  background: #444;
+  border-radius: 13px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.novo-gasto__toggle--on {
+  background: #00ff88;
+}
+
+.novo-gasto__toggle-thumb {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: left 0.2s;
+}
+
+.novo-gasto__toggle--on .novo-gasto__toggle-thumb {
+  left: 25px;
+}
+
+.novo-gasto__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.novo-gasto__btn-cancelar,
+.novo-gasto__btn-salvar {
+  flex: 1;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.novo-gasto__btn-cancelar {
+  background: #252b3b;
+  color: #aaa;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.novo-gasto__btn-salvar {
+  background: #00ff88;
+  color: #1a1f2e;
+}
