@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useGastos } from '../../context/GastosContext';
+import { applyMoneyMask, parseMaskedValue } from '../../utils/formatCurrency';
 import './NovoGasto.css';
 
 const CATEGORIAS = ['Alimentação', 'Transporte', 'Lazer', 'Saúde', 'Moradia', 'Educação', 'Outros'];
@@ -23,7 +24,11 @@ function NovoGasto() {
 
   function handleChange(e) {
     const { name, value, type, checked } = e.target;
-    setForm((prev) => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
+    if (name === 'valor') {
+      setForm((prev) => ({ ...prev, valor: applyMoneyMask(value) }));
+    } else {
+      setForm((prev) => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
+    }
     if (erros[name]) setErros((prev) => ({ ...prev, [name]: '' }));
   }
 
@@ -42,9 +47,7 @@ function NovoGasto() {
       return;
     }
 
-    const valorNumerico = parseFloat(
-      form.valor.replace('R$', '').replace(/\./g, '').replace(',', '.').trim()
-    );
+    const valorNumerico = parseMaskedValue(form.valor);
 
     adicionarGasto({
       valor: valorNumerico,
