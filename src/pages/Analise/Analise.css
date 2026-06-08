@@ -1,0 +1,149 @@
+.analise {
+  min-height: 100vh;
+  background: #1a1f2e;
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+.analise__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.analise__back {
+  background: none;
+  border: none;
+  color: #00ff88;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.analise__header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.analise__orcamento-card {
+  margin: 20px;
+  background: #252b3b;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.analise__orcamento-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.analise__orcamento-label {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.analise__orcamento-valor {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.analise__orcamento-limite {
+  color: #00ff88;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.analise__progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin: 12px 0 8px;
+  overflow: hidden;
+}
+
+.analise__progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.analise__progress-text {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.analise__filtros {
+  display: flex;
+  gap: 8px;
+  padding: 0 20px 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.analise__filtros::-webkit-scrollbar {
+  display: none;
+}
+
+.analise__filtro-btn {
+  background: #252b3b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: #aaa;
+  font-size: 13px;
+  padding: 8px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.analise__filtro-btn--ativo {
+  background: #00ff88;
+  color: #1a1f2e;
+  border-color: #00ff88;
+  font-weight: 700;
+}
+
+.analise__lista {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.analise__item {
+  background: #252b3b;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.analise__item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.analise__item-desc {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.analise__item-meta {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.analise__item-valor {
+  color: #ff6b6b;
+  font-size: 15px;
+  font-weight: 700;
+}
