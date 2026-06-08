@@ -69,7 +69,8 @@ function Home() {
           </div>
         )}
       </div>
-
+      <Charts />
+      
       <button className="home__fab" onClick={() => navigate('/novo-gasto')}>
         +
       </button>

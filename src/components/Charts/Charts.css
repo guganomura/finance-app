@@ -1,0 +1,19 @@
+.charts {
+  margin: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.charts__section {
+  background: #252b3b;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.charts__title {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
