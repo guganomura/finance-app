@@ -4,6 +4,8 @@ import { useGastos } from '../../context/GastosContext';
 import Sidebar from '../../components/Sidebar';
 import EmptyState from '../../components/EmptyState';
 import { formatCurrency } from '../../utils/formatCurrency';
+import { useLocation } from 'react-router-dom';
+import Toast from '../../components/Toast';
 import './Home.css';
 
 function Home() {
@@ -15,6 +17,14 @@ function Home() {
   const saldo = 5000 - totalGastos;
   const recorrentes = gastos.filter((g) => g.recorrente);
   const recentes = gastos.slice(0, 3);
+  const location = useLocation();
+  const [toastVisible, setToastVisible] = useState(false);
+
+  useEffect(() => {
+    if (location.state?.sucesso) {
+      setToastVisible(true);
+    }
+  }, [location.state]);
 
   return (
     <div className="home">
@@ -74,6 +84,12 @@ function Home() {
       <button className="home__fab" onClick={() => navigate('/novo-gasto')}>
         +
       </button>
+
+      <Toast
+        message="Gasto registrado com sucesso!"
+        visible={toastVisible}
+        onClose={() => setToastVisible(false)}
+      />
     </div>
   );
 }
